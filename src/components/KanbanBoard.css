@@ -1,0 +1,111 @@
+.kanban-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(135deg, #e3f2fd, #ffffff);
+  min-height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.kanban-column {
+  width: 280px;
+  height: fit-content;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.kanban-column:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.kanban-column-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  color: #333;
+}
+
+.kanban-column-title.to-do{
+    background: #c7ebff;
+}
+
+.kanban-column-title.in-progress{
+    background-color: #ebb3ff;
+}
+
+.kanban-column-title.peer-review{
+    background-color: #fff4b5;
+}
+
+.kanban-column-title.done{
+    background-color: #c2ffde;
+}
+
+.kanban-task-list {
+  min-height: 320px;
+  padding: 10px;
+  background: #fafafa;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kanban-task {
+  background: #0288d1;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.kanban-task:hover {
+  background: #0277bd;
+  transform: scale(1.05);
+}
+
+.kanban-task.dragging {
+  opacity: 0.6;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.task-title {
+  flex: 1;
+  font-size: 14px;
+}
+
+.kanban-task {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.task-description {
+  font-size: 14px;
+  color: #666;
+}
